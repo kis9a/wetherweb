@@ -1,4 +1,10 @@
-import { WeatherState, WeatherAction, GET_WEATHER, SET_LOADING, SET_ERROR } from "../types";
+import {
+  WeatherState,
+  WeatherAction,
+  GET_WEATHER,
+  SET_LOADING,
+  SET_ERROR,
+} from "../types";
 
 const initialState: WeatherState = {
   data: null,
@@ -6,6 +12,7 @@ const initialState: WeatherState = {
   error: "",
 };
 
+// eslint-disable-next-line
 export default (state = initialState, action: WeatherAction): WeatherState => {
   switch (action.type) {
     case GET_WEATHER:

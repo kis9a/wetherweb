@@ -77,7 +77,7 @@ export type WeatherAction =
   | SetLoadingAction
   | SetErrorAcrtion;
 
-export interface AlertAcriont {
+export interface AlertAction {
   type: typeof SET_ALEART;
   payload: string;
 }
