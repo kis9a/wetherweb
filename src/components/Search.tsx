@@ -30,10 +30,12 @@ const Search: FC<SearchProps> = ({ title }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <form className="form" onSubmit={submitHandler}>
-        <input type="text" value={city} onChange={changeHandler} />
-      </form>
-      <button className="">Search</button>
+      <div className="flex">
+        <form className="form" onSubmit={submitHandler}>
+          <input type="text" value={city} onChange={changeHandler} />
+        </form>
+        <button className="">Search</button>
+      </div>
     </div>
   );
 };

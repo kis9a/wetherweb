@@ -6,23 +6,26 @@ interface WeatherProps {
 }
 
 const Weather: FC<WeatherProps> = ({ data }) => {
-  // const fahrenheit =(data.main.temp * 1.8)
+  console.log(data);
   return (
     <div>
-      <h1>
-        {data.name} - {data.sys.country}
-      </h1>
-      <div>
-        <p>{data.weather[0].description}</p>
-        <p>
-          <img
-            src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
-            alt="img"
-          />
-        </p>
+      <div className="box">
+        <h1>
+          {data.name} - {data.sys.country}
+        </h1>
       </div>
-      <div>
-        <p>{data.main.temp}K</p>
+      <div className="box">
+        <img
+          src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`}
+          alt="img"
+        />
+        <p>Weather: {data.weather[0].description}</p>
+      </div>
+      <div className="box">
+        <p>Temperature: {data.main.temp}K</p>
+      </div>
+      <div className="box">
+        <p>Windspeed: {data.wind.speed}K</p>
       </div>
     </div>
   );
